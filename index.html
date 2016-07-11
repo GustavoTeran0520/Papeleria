@@ -1,0 +1,283 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Papeleria mega popular </title>
+
+<link rel="stylesheet" media="screen"href="@{'/public/stylesheets/bootstrap.css'}">
+<link rel="stylesheet" media="screen"href="@{'/public/stylesheets/estilo_slider.css'}">
+<link href="@{'public/stylesheets/bootstrap.css'}" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="@{'public/javascripts/jquery.min.js'}"></script>
+<!-- Custom Theme files -->
+<link href="@{'public/stylesheets/style.css'}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+
+<script src="@{'public/javascripts/jquery1.js'}"></script>    <!-- controlador de imagenes -->
+<script src="@{'public/javascripts/controlador.js'}"></script>    <!-- controlador de imagenes -->
+<script src="@{'public/javascripts/jquery.min.js'}"></script>
+	    <script src="@{'public/javascripts/main.js'}"></script>    <!-- controlador de imagenes -->
+
+<link rel="stylesheet" href="@{'/public/stylesheets/main.css'}"> 
+	  
+	      <link rel="stylesheet" href="@{'/public/stylesheets/main.css'}"> 
+
+
+
+
+
+
+<script type="text/javascript">
+function validar_cedula()
+{
+	
+	 var i;
+	 var cedula;
+	 var acumulado;
+	 var cedula = txtcedula.value;
+	 
+	
+	 var instancia;
+	 acumulado=0;
+	 for (i=1;i<=9;i++)
+	 {
+	  if (i%2!=0)
+	  {
+	   instancia=cedula.substring(i-1,i)*2;
+	   if (instancia>9) instancia-=9;
+	  }
+	  else instancia=cedula.substring(i-1,i);
+	  acumulado+=parseInt(instancia);
+	 }
+	 while (acumulado>0)
+	  acumulado-=10;
+	 if (cedula.substring(9,10)!=(acumulado*-1))
+	 {
+	  alert("Cedula no valida ingrese uno correcto !!");
+	 
+	 	 }
+	 else{
+	 alert("Cedula valida  !!");
+	 
+	 }
+	}
+	</script>
+	
+	
+	
+	<body>
+   <!----- start-header---->
+  <div class="wrapper">
+    <!----start-header---->
+		 <div class="header">
+	       <div class="container header_top">
+				<div class="logo">
+				  <a href="index.html"><img src="@{'public/images/logo.jpg'}" alt=""></a>
+				</div>
+		  		<div class="menu">
+					<a class="toggleMenu" href="#"><img src="images/nav_icon.png" alt="" /> </a>
+					<ul class="nav" id="nav">
+					  <li class="current" style="background-color: green"><a href="index.html">Inicio</a></li>
+					  <li><a href="/Application/Reserva">Reservar Utiles</a></li>							
+					  <div class="clearfix"></div>
+					</ul>
+					<script type="text/javascript" src="js/responsive-nav.js"></script>
+				</div>							
+	  			<div class="clearfix"> </div>
+			    <!----//End-top-nav---->
+			 </div>
+		</div>
+	<!----- //End-header---->
+
+     <div class="container banner">
+	 	
+	 	
+
+<div id="seccion_slider">
+
+
+<section class="slider-container">
+	
+		<ul id="slider" class="slider-wrapper">
+			
+			<li >
+				
+				<img id="1"  src="public/images/cinco.png" style="width: 800px;  height: 390px;">  
+				
+				
+				
+			</li>
+			
+			
+
+			<li >
+
+				
+				<img id="1"  src="public/images/cuadernos.png" style="width: 800px;  height: 390px;">			
+				
+						
+			</li>
+			
+				<li >
+				
+				<img id="1"  src="public/images/cuatro.png" style="width: 800px;  height: 390px;">  
+				
+				
+				
+			</li>
+			
+			
+
+			<li >
+
+				
+				<img id="1"  src="public/images/2.png" style="width: 800px;  height: 390px;">			
+				
+						
+			</li>
+			
+			
+
+
+			
+			
+					
+			
+			
+		</ul>
+		
+	
+
+		<!-- Sombras -->
+		<div class="shadow"></div>
+
+		<!-- Controles -->
+		
+		<ul id="slider-controls" class="slider-controls"></ul>		
+		
+		<p>
+	<p>
+	<p>
+	<h3 style=" text-align: justify;">Tenemos las mejores marcas para tus productos escolares contamos con Norma , Stilo </h3>
+		
+	</section>
+	<p>
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- aki va despues del slyder -->
+<div class='container content_middle'>
+	 		<div class="row" >
+	 			<div class="col-md-8 middle_left">
+	 				<ul class="test_box middle_grid">
+		    			<li class="test_img" ><img src="images/pic1.jpg" class="img-responsive" alt=""> </li>
+						<li class="test_desc">
+							<h4><a href="#">Noticias 1</a></h4>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl</p> 
+							<br><a class="content_btn" href="">More</a>
+					    </li>	
+					    <div class="clearfix">	</div>    				
+		    		</ul>
+		    		<ul class="test_box">
+		    			<li class="test_img"><img src="images/pic2.jpg" class="img-responsive" alt=""> </li>
+						<li class="test_desc">
+							<h4><a href="#">diam nonummy nibh</a></h4> nnnnnnnnnnnnnnnnnnnnnnnnnnnnnhb
+							<p>hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi..</p>
+							<br><a class="content_btn" href="">More</a>
+					    </li>	
+					    <div class="clearfix">	</div>    				
+		    		</ul>
+	 			</div>
+	 			<div class="col-md-4">
+	 				<div class="sap_tabs">	
+						 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px; background-color: red">
+						  
+						  red social 
+						  
+						  			  	 
+							<div class="resp-tabs-container">
+							    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+									<div class="facts">
+									  <div class="tab_box">
+									    <h4><a href="#">Hendrerit vulputate</a></h4>
+									    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+									   </div>
+									  <ul class="tab_list">
+									  	<li><a href="#">Diam nonummy nibh euismod</a></li>
+									  	<li><a href="#">Hendrerit in vulputate velit</a></li>
+									  	<li><a href="#">Diam nonummy nibh euismod</a></li>
+									  	<li><a href="#">Fendrerit in vulputate velit</a></li>
+									  </ul>           
+							        </div>
+							     </div>	
+							      <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+									<div class="facts">
+									  <div class="tab_box">
+									    <h4><a href="#">Mirum est notare</a></h4>
+									    <p>Dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit pra.</p>
+									   </div>
+									  <ul class="tab_list">
+									  	<li><a href="#">Diam nonummy nibh euismod</a></li>
+									  	<li><a href="#">Hendrerit in vulputate velit</a></li>
+									  	<li><a href="#">Diam nonummy nibh euismod</a></li>
+									  </ul>           
+							        </div>
+							     </div>	
+							      <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+									<div class="facts">
+									  <div class="tab_box">
+									    <h4><a href="#">nunc nobis</a></h4>
+									    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+									   </div>
+									  <ul class="tab_list">
+									  	<li><a href="#">Diam nonummy nibh euismod</a></li>
+									  	<li><a href="#">Hendrerit in vulputate velit</a></li>
+									  	<li><a href="#">Diam nonummy nibh euismod</a></li>
+									  	<li><a href="#">Fendrerit in vulputate velit</a></li>
+									  </ul>           
+							        </div>
+							     </div>		        					 
+							  </div>	
+					        </div>
+					  </div>
+	 			</div>
+	 		</div>
+	 	 </div>
+
+
+
+
+</div>
+	 	
+	 	
+<footer>
+aki footer
+</footer>	 	
+	 
+</body>
+	
+
+</html>
+ 
+ 
+ 
+ 
+
+
+
+
+    
+  

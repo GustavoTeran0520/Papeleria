@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Papeleria mega popular </title>
+
+<link rel="stylesheet" media="screen"href="@{'/public/stylesheets/bootstrap.css'}">
+<link rel="stylesheet" media="screen"href="@{'/public/stylesheets/estilo_slider.css'}">
+<link href="@{'public/stylesheets/bootstrap.css'}" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="@{'public/javascripts/jquery.min.js'}"></script>
+<!-- Custom Theme files -->
+<link href="@{'public/stylesheets/style.css'}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+
+<script src="@{'public/javascripts/jquery1.js'}"></script>    <!-- controlador de imagenes -->
+<script src="@{'public/javascripts/controlador.js'}"></script>    <!-- controlador de imagenes -->
+<script src="@{'public/javascripts/jquery.min.js'}"></script>
+	    <script src="@{'public/javascripts/main.js'}"></script>    <!-- controlador de imagenes -->
+
+<link rel="stylesheet" href="@{'/public/stylesheets/main.css'}"> 
+	  
+	      <link rel="stylesheet" href="@{'/public/stylesheets/main.css'}"> 
+
+	
+ <link rel="stylesheet" type="text/css" href="/public/thumbelina/thumbelina.css" />
+ <script type="text/javascript" src="/public/javascripts/jquery-1.6.4.min.js"></script>
+ <script type="text/javascript" src="/public/thumbelina/thumbelina.js"></script>
+	
+
+
+
+
+<style>
+		    #slider1 {
+		     position:relative;  /* Containers need relative or absolute position. */
+		     margin-left:20px;
+		     width:256px;
+		     height:120px;
+		     border-top:1px solid #aaa;
+		     border-bottom:1px solid #aaa;
+		 }
+		
+		 #slider2 {
+		     position:relative;
+		     margin-left:20px;
+		     width:75%;
+		     height:120px;
+		     border-top:1px solid #aaa;
+		     border-bottom:1px solid #aaa;
+		 }
+		
+		 #slider3 {
+		     position:relative;
+		     margin-left:20px;
+		     width:75%;
+		     height:120px;
+		     border-top:1px solid #aaa;
+		     border-bottom:1px solid #aaa;
+		 }   
+		 
+		  #slider4 {
+		     position:relative;
+		     margin-left:20px;
+		     width:75%;
+		     height:120px;
+		     border-top:1px solid #aaa;
+		     border-bottom:1px solid #aaa;
+		 } 
+		}
+		
+		</style>
+
+<script type="text/javascript">
+            $(function(){
+                
+                $('#slider1').Thumbelina({
+                    $bwdBut:$('#slider1 .left'),    // Selector to left button.
+                    $fwdBut:$('#slider1 .right')    // Selector to right button.
+                });
+                
+                $('#slider2').Thumbelina({
+                    $bwdBut:$('#slider2 .left'),    // Selector to left button.
+                    $fwdBut:$('#slider2 .right')    // Selector to right button.
+                });
+                
+                $('#slider3').Thumbelina({
+                    $bwdBut:$('#slider3 .left'),    // Selector to left button.
+                    $fwdBut:$('#slider3 .right')    // Selector to right button.
+                });
+                
+                $('#slider4').Thumbelina({
+                    $bwdBut:$('#slider4 .left'),    // Selector to left button.
+                    $fwdBut:$('#slider4 .right')    // Selector to right button.
+                });
+                
+               
+              
+            })
+
+</script>
+
+</head>
+
+<!-- -Calcular total -->
+
+
+
+
+<script>
+function calculartotal(){
+	
+	 acutotal=0;
+	 #{list items:y,as:'tem'}
+	 txttotal.value="${tem.total}";	
+	 acu = txttotal.value;
+	 acu2=parseFloat(acu);
+	 acutotal=acutotal + acu2;
+	 #{/list}
+	 txttotal.value = acutotal;
+	
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -Intentare sacar datos   -->
+
+ <script type="text/javascript">
+
+function sambo(valor) { 
+#{list items:x,as: 'cu'}  
+i=${cu.code};
+if (i==valor.id){	
+
+tipo.value    ="${cu.tipo}";
+precio.value  ="${cu.precio}";
+marca.value="${cu.marca}";
+n_hojas.value="${cu.n_hojas}";
+detalle.value="${cu.detalle}";
+
+
+
+return false;
+         }  
+
+#{/list}
+	
+}
+</script>
+
+
+<script type="text/javascript">
+
+function pedro(){
+	tabla1.style.display='none';
+	tabla2.style.display='block';
+	
+	
+} 
+
+</script>
+
+
+
+
+<script type="text/javascript">
+
+function pedro2(){
+	tabla2.style.display='none';
+	tabla1.style.display='block';
+	
+} 
+
+</script>
+
+<script type="text/javascript">
+
+function oculta(){
+	tabla1.style.display='none';
+	tabla2.style.display='none';
+	
+	
+} 
+
+</script>
+
+
+
+<script type="text/javascript">
+///funcion dos saca los valores de esferograficos
+
+function esferograficos(valor) { 
+	
+	
+#{list items:z,as: 'es'}  
+i=${es.code};
+if (i==valor.id ){	
+
+tipoes.value    ="${es.tipo}";
+precioes.value  ="${es.precio}";
+marcaes.value="${es.marca}";
+
+detallees.value="${es.detalle}";
+
+
+
+return false;
+         }  
+
+#{/list}
+	
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+///funcion dos saca los valores de accesorios
+
+function accesorios(valor) { 
+#{list items:a,as: 'ac'}  
+i=${ac.code};
+if (i==valor.id){	
+
+tipoes.value    ="${ac.tipo}";
+precioes.value  ="${ac.precio}";
+marcaes.value="${ac.marca}";
+
+detallees.value="${ac.detalle}";
+
+
+
+return false;
+         }  
+
+#{/list}
+	
+}
+</script>
+
+
+
+<script type="text/javascript">
+///funcion dos saca los valores de accesorios
+
+function archivadores(valor) { 
+#{list items:w,as: 'ac'}  
+i=${ac.code};
+if (i==valor.id){	
+
+tipoes.value    ="${ac.tipo}";
+precioes.value  ="${ac.precio}";
+marcaes.value="${ac.marca}";
+
+detallees.value="${ac.detalle}";
+
+
+
+return false;
+         }  
+
+#{/list}
+	
+}
+</script>
+
+
+
+
+
+
+<body onload="oculta()"  >
+
+#{if user?.id}
+                <div id="options" style="float: right;position: relative;">
+                  <label class="control-label col-xs-2"> iniciad@:${user.username} </label> <br>   
+                    <a href="@{Application.logout()}" style="float: right;position: relative;padding-right: 5px">[Cerrar Sesion]</a>
+           
+                </div>
+            #{/if}
+            <div id="content">
+            #{if flash.error}
+                <p class="fError">
+                    <strong>${flash.error}</strong>
+                </p>
+            #{/if}
+            #{if flash.success}
+              <center>  <p class="fSuccess">
+                    <strong>${flash.success}</strong>
+                </p></center>
+            #{/if}
+
+
+ <!----- start-header---->
+  <div class="wrapper">
+    <!----start-header---->
+		 <div class="header">
+	       <div class="container header_top">
+				<div class="logo">
+				  <a href="index.html"><img src="@{'public/images/logo.jpg'}" alt=""></a>
+				</div>
+		  		<div class="menu">
+					<a class="toggleMenu" href="#"><img src="images/nav_icon.png" alt="" /> </a>
+					<ul class="nav" id="nav">
+					  <li ><a href="/Application/index">Inicio</a></li>
+					  <li  class="current"><a href="/Application/Reserva">Reservar Utiles</a></li>							
+					  <div class="clearfix"></div>
+					</ul>
+					<script type="text/javascript" src="js/responsive-nav.js"></script>
+				</div>							
+	  			<div class="clearfix"> </div>
+			    <!----//End-top-nav---->
+			 </div>
+		</div>
+	<!----- //End-header---->
+
+
+<div class="container banner" >
+	 	
+	  	<div class="row" >
+	 			<div class="col-md-8 middle_left">
+	 				<ul class="test_box middle_grid">
+		    			<li class="test_img" ></li>
+						<li class="test_desc">
+							<h4><a href="#">Cuaderno</a></h4>
+			
+			<!-- aki comienza slider 1 -->
+			
+			<div id="slider2">
+        
+            <div class="thumbelina-but horiz left">&#706;</div>
+         
+            <ul>
+            	 
+            	       #{list items:x,as: 'cu'}    
+           
+          
+          <img  src="/public/images/${cu.imagen}" style="width: 120px; height: 120px;"  id="${cu.code}"   onclick="sambo(this),pedro()">  </img>
+               
+                                #{/list}  
+            </ul>
+
+            <div class="thumbelina-but horiz right">&#707;</div>
+        </div>	
+			
+			
+			<!-- Fin comienzo slider 1 -->
+							
+						
+							
+							
+							
+					    </li>	
+					    <div class="clearfix">	</div>    				
+		    		</ul>
+		    		
+		    		<ul class="test_box middle_grid">
+		    			<li class="test_img" ></li>
+						<li class="test_desc">
+							<h4><a href="#">Esferosgraficos</a></h4>
+							
+							
+							<!-- aki comienza slider2  -->
+							
+							 
+        <div id="slider1">
+        
+            <div class="thumbelina-but horiz left">&#706;</div>
+         
+            <ul>
+            	 
+            	       #{list items:z,as:'es'}    
+           
+          
+          <img  src="/public/images/${es.imagen}" style="width: 120px; height: 120px;"  id="${es.code}"  onclick="esferograficos(this), pedro2();">  </img>
+               
+                                #{/list}  
+            </ul>
+
+            <div class="thumbelina-but horiz right">&#707;</div>
+        </div>	
+							
+							
+							<!-- fin comienza slider 2 -->
+							
+							
+							
+						
+						
+						</li>	
+					    <div class="clearfix">	</div>    				
+		    		</ul>
+		    		
+		    		
+		    		<ul class="test_box middle_grid">
+		    			<li class="test_img" > </li>
+						<li class="test_desc">
+							<h4><a href="#">Accesorios</a></h4>
+							
+				<!-- aki comienza 3 -->
+				<div id="slider3">
+        
+            <div class="thumbelina-but horiz left">&#706;</div>
+         
+            <ul>
+            	 
+            	       #{list items:a,as:'ac'}    
+           
+          
+          <img  src="/public/images/${ac.imagen}" style="width: 120px; height: 120px;"  id="${ac.code}"  onclick="accesorios(this),pedro2()"">  </img>
+               
+                                #{/list}  
+            </ul>
+
+            <div class="thumbelina-but horiz right">&#707;</div>
+        </div>
+				
+				
+				
+				
+				<!-- fin sllider 3 -->
+				
+							
+							
+							
+							  </li>	
+					    <div class="clearfix">	</div>    				
+		    		</ul>
+		    		
+		    		
+		    		<ul class="test_box">
+		    			<li class="test_img"> </li>
+						<li class="test_desc">
+							<h4><a href="#">Archivadores</a></h4>
+							
+							
+							<!-- aki comienza slider4-->
+							
+							<div id="slider4">
+        
+            <div class="thumbelina-but horiz left">&#706;</div>
+         
+            <ul>
+            	 
+            	       #{list items:w,as:'ar'}    
+           
+          
+          <img  src="/public/images/${ar.imagen}" style="width: 120px; height: 120px;"  id="${ar.code}" onclick="archivadores(this),pedro2()" >  </img>
+               
+                                #{/list}  
+            </ul>
+
+            <div class="thumbelina-but horiz right">&#707;</div>
+        </div>	
+							
+							
+							
+							<!-- Fin comienza slider 4 -->
+							
+							
+							
+							
+							    </li>	
+					    <div class="clearfix">	</div>    				
+		    		</ul>
+	 			</div>
+	 			<div class="col-md-4">
+	 				<div class="sap_tabs">	
+						 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px; background-color: red">
+						  
+						  <!-- --aki va la nueva tabla esferograficos -->
+
+
+
+<table border="2" id="tabla1" >
+
+#{form @Application.registrar_temporal(precio,detalle,cantidad)}
+
+<form  method="post" class="form-horizontal">
+
+
+<tr>
+<td style="background-color: black; color: white; text-align: center;" >
+
+Tipo
+
+
+ </td>
+<td>
+
+
+<input  type="text" readonly="readonly"  id="tipoes"  name="tipo"   style="width: 120px; text-align: center;"  class="form-control" > 
+
+</td>
+</tr>
+
+
+<tr>
+
+
+<td style="background-color: black; color: white; text-align: center;">Precio </td>
+
+
+<td><input  type="text"  readonly="readonly"  id="precioes" name="precio"  style="width: 120px; text-align: center;"> </td>
+
+</tr>
+
+
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Marca </td>
+
+<td><input  type="text"  readonly="readonly"  id="marcaes"    name="marca" style="width: 120px; text-align: center;"> </td>
+
+
+</tr>
+
+
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Detalle </td>
+
+<td><input  type="text"  readonly="readonly"  id="detallees" name="detalle"  style="width: 200px; text-align: center;  " > </td>
+
+
+</tr>
+
+
+
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Cantidad </td>
+
+<td><input  type="number" min="0"  id="cantidades"  name="cantidad"   style="width: 200px; text-align: center;" required="required"> </td>
+
+
+</tr>
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Opciones</td>
+
+
+
+<td> <input  type="submit"  value="Agregar Producto">  </td>
+
+
+
+</tr>
+
+</form>
+#{/form}
+
+
+</table>
+
+
+<!-- --fin -->
+
+
+					  
+						  <!-- --aki va la nueva tabla con hojas -->
+
+
+
+<table border="2" id="tabla2">
+
+
+#{form @Application.registrar_temporal(precio,detalle,cantidad)}
+
+
+<form  method="post" class="form-horizontal">
+<h3>Detalle</h3>
+<tr>
+<td style="background-color: black; color: white; text-align: center;" >
+
+Tipo
+
+ </td>
+<td>
+
+
+<input  type="text" readonly="readonly"  id="tipo"  name="tipo"   style="width: 120px; text-align: center;"  class="form-control" > 
+
+</td>
+</tr>
+
+
+<tr>
+
+
+<td style="background-color: black; color: white; text-align: center;">Precio </td>
+
+
+<td><input  type="text"  readonly="readonly"  id="precio" name="precio"  style="width: 120px; text-align: center;"> </td>
+
+</tr>
+
+
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Marca </td>
+
+<td><input  type="text"  readonly="readonly"  id="marca"    name="marca" style="width: 120px; text-align: center;"> </td>
+
+
+</tr>
+
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Numero  Hojas </td>
+
+<td><input  type="text"  readonly="readonly" id="n_hojas" name="n_hojas"  style="width: 120px; text-align: center;"> </td>
+
+</tr>
+
+
+
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Detalle </td>
+
+<td><input  type="text"  readonly="readonly"  id="detalle" name="detalle"  style="width: 200px; text-align: center;  " > </td>
+
+
+</tr>
+
+
+
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Cantidad </td>
+
+<td><input  type="number" min="0"  id="cantidad"  name="cantidad"   style="width: 200px; text-align: center;" required="required"> </td>
+
+
+</tr>
+<tr>
+
+<td style="background-color: black; color: white; text-align: center;">Opciones</td>
+
+
+
+<td> <input  type="submit"  value="Agregar Producto">  </td>
+
+
+
+</tr>
+
+
+</form>
+#{/form}
+
+</table>
+
+
+<!-- --fin tabla2  -->
+
+
+<br>
+
+
+
+
+<!-- inicio de carro de compras -->
+
+
+<h3>Carro de compras</h3>
+<table border="1" >
+
+<tr>
+
+
+<td style="background-color: black; color: white; text-align: center;  ">Producto </td>
+<td style="background-color: black; color: white; text-align: center;" >Cantidad </td>
+<td style="background-color: black; color: white; text-align: center;">Precio Unitario </td>
+
+<td style="background-color: black; color: white; text-align: center;" >SubTotal </td>
+<td style="background-color: black; color: white; text-align: center;">Opciones</td>
+
+</tr>
+
+
+ #{list items:y,as: 'tem'}
+<tr>
+
+
+
+
+
+<td >  <input type="text"  size="4"  value=" ${tem.detalle}"> </td>
+<td >  <input type="text" size="4"  value=" ${tem.cantidad}"> </td>
+<td > <input type="text" size="5" value=" ${tem.precio}"> </td>
+
+
+<td >  <input type="text" size="4" value=  "${tem.total}"   > </td>
+
+
+
+<td><a href="/Application/eliminar_pedido?id=${tem.id}" onclick="return confirm('Estas seguro???');">Eliminar </a></td>
+
+</tr>
+
+
+#{/list}  
+
+
+<td colspan="3">Total</td>
+<td>  <input size="4" type="text" id="txttotal"  value= ""  >  </td>
+
+<td><input  type="button" value="calcular " onclick="calculartotal();"> </td>
+
+
+</table>
+
+<!-- fin  de carro de compras -->
+
+<br>
+
+
+
+
+
+
+
+
+						  
+						  
+						  			  	 
+							
+
+
+
+
+					        </div>
+					  </div>
+	 			</div>
+	 		</div>
+	 		
+	 		
+	 		
+	 		
+	 	
+	 	</div>
+
+
+
+
+ </body>
+ </html>
